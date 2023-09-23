@@ -1,0 +1,94 @@
+@import "colors";
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(125, 125, 232, 0.145),
+    rgba(228, 53, 228, 0.141)
+  );
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    text-align: center;
+    border-radius: 4px;
+    padding: 20px 10px;
+    margin-right: 50px;
+    background-color: $blue;
+    transition: background-color 0.3s ease;
+    border: none;
+
+    &:hover {
+      background-color: $bluedark;
+    }
+  }
+
+  button a {
+    text-align: center;
+    color: #fff;
+    border: none;
+
+    cursor: pointer;
+    font-size: 16px;
+  }
+}
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 25px 30px;
+  .user-card {
+    width: calc(33.33% - 20px);
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    span {
+      font-size: 0.8rem;
+      display: block;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+    @media (max-width: 700px) {
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+
+      p {
+        white-space: normal;
+        overflow: auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .home {
+    width: 100%;
+    .box {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}

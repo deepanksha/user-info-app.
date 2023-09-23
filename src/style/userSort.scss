@@ -1,0 +1,65 @@
+@import "colors";
+
+.container {
+  display: flex;
+  justify-content: end;
+  padding: 20px 40px;
+  width: 20%;
+}
+.user-sort {
+  padding: 20px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(125, 125, 232, 0.45),
+    rgba(228, 53, 228, 0.41)
+  );
+
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  label {
+    margin-right: 10px;
+  }
+
+  select {
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+
+      border-color: $blue;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .container {
+    width: 30%;
+  }
+
+  .user-sort {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .user-sort {
+    padding: 10px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  select {
+    font-size: 12px;
+  }
+}
